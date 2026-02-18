@@ -99,18 +99,12 @@ def load_minicpmv_hf():
 
     model_name = "openbmb/MiniCPM-o-4_5"
 
-    try:
-        import flash_attn  # noqa: F401
-        attn_impl = "flash_attention_2"
-    except ImportError:
-        attn_impl = "sdpa"
-
-    print(f"Loading model {model_name} (attn: {attn_impl})...")
+    print(f"Loading model {model_name}...")
     load_start = time.time()
     model = AutoModel.from_pretrained(
         model_name,
         trust_remote_code=True,
-        attn_implementation=attn_impl,
+        attn_implementation="sdpa",
         torch_dtype=torch.bfloat16,
         init_vision=True,
         init_audio=False,
