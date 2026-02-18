@@ -1,0 +1,4 @@
+vision_model: "openbmb/minicpm-v4.5"
+docs_dir: "docs"
+output_dir: "output"
+dpi: 200

@@ -1,1 +1,5 @@
-config.yaml
+output/
+venv/
+__pycache__/
+*.pyc
+docs/*.pdf
