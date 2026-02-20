@@ -1,18 +1,19 @@
-# Core PDF processing
-PyMuPDF>=1.24.0
-pyyaml>=6.0
+# Python = 3.10
 
-# Vision model — MiniCPM-V-2.6
-Pillow>=10.0.0
-transformers>=4.40.0
-accelerate>=0.30.0
-sentencepiece>=0.1.99
+PyMuPDF==1.27.1
+pyyaml==6.0.3
+Pillow==10.4.0
+transformers==4.51.0
+accelerate
+minicpmo-utils[all]>=1.0.5
+tqdm>=4.66.0
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+crewai>=0.80.0
+openai>=1.0.0
+fastapi>=0.115.0
+uvicorn>=0.30.0
+python-dotenv>=1.0.0
 
 # PyTorch — install separately with CUDA support (see README)
-# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
-
-# Flash Attention (Linux only, strongly recommended for performance)
-# pip install flash-attn --no-build-isolation
-
-# Optional: Docling parser
-# pip install docling>=2.0.0
+# pip install "torch>=2.3.0,<=2.8.0" "torchaudio<=2.8.0" --index-url https://download.pytorch.org/whl/cu126
